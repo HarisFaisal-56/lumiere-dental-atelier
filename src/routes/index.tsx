@@ -1,24 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/SiteHeader";
+import { Hero } from "@/components/sections/Hero";
+import { Marquee } from "@/components/sections/Marquee";
+import { Services } from "@/components/sections/Services";
+import { Atelier } from "@/components/sections/Atelier";
+import { Philosophy } from "@/components/sections/Philosophy";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Contact } from "@/components/sections/Contact";
+import { SiteFooter } from "@/components/SiteFooter";
+import { useReveal } from "@/hooks/use-reveal";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Lumière Dental Atelier — Private Cosmetic & Restorative Dentistry" },
+      {
+        name: "description",
+        content:
+          "A private dental atelier practising cinematic, considered care. Porcelain veneers, ceramic implants, invisible alignment, and full-mouth renewal — composed like couture.",
+      },
+      { property: "og:title", content: "Lumière Dental Atelier" },
+      {
+        property: "og:description",
+        content:
+          "Cinematic, considered dental care. Veneers, ceramic implants, alignment, and full-mouth renewal — composed like couture.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Lumière Dental Atelier" },
+      {
+        name: "twitter:description",
+        content: "A private dental atelier practising cinematic, considered care.",
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
+  useReveal();
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative">
+      <SiteHeader />
+      <Hero />
+      <Marquee />
+      <Services />
+      <Atelier />
+      <Philosophy />
+      <Testimonials />
+      <Contact />
+      <SiteFooter />
+    </main>
   );
 }
