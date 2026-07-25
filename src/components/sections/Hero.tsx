@@ -70,3 +70,23 @@ function Metric({ value, label, suffix }: { value: string; label: string; suffix
     </div>
   );
 }
+
+function Trust({ icon, label, sub }: { icon: "star" | "heart" | "clock" | "award"; label: string; sub: string }) {
+  const paths: Record<string, JSX.Element> = {
+    star: <path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.5-6.2 3.5L7 14.3l-5-4.9 7-.9z" />,
+    heart: <path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z" />,
+    clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
+    award: <><circle cx="12" cy="9" r="6" /><path d="M9 14l-2 8 5-3 5 3-2-8" /></>,
+  };
+  return (
+    <div className="flex items-start gap-3">
+      <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-gold-deep" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" strokeLinecap="round">
+        {paths[icon]}
+      </svg>
+      <div>
+        <div className="font-display text-lg leading-tight">{label}</div>
+        <div className="mt-0.5 text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">{sub}</div>
+      </div>
+    </div>
+  );
+}
