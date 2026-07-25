@@ -59,6 +59,25 @@ export function Atelier() {
                 </li>
               ))}
             </ul>
+
+            <div className="reveal reveal-delay-4 mt-12 rounded-2xl border border-border bg-background/60 backdrop-blur-sm p-6">
+              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-gold-deep">Why patients choose Dr. Laurent</p>
+              <div className="mt-5 grid grid-cols-2 gap-x-6 gap-y-4">
+                {[
+                  ["15+", "Years of practice"],
+                  ["4,000+", "Smile transformations"],
+                  ["International", "Training & fellowships"],
+                  ["Advanced", "Cosmetic expertise"],
+                  ["Personalised", "Treatment planning"],
+                  ["Published", "In clinical journals"],
+                ].map(([k, v]) => (
+                  <div key={v} className="flex items-baseline gap-3 border-b border-border/60 pb-3">
+                    <span className="font-display text-lg text-foreground">{k}</span>
+                    <span className="text-xs uppercase tracking-[0.14em] text-muted-foreground">{v}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

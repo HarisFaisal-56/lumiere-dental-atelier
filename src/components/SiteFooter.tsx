@@ -27,22 +27,29 @@ export function SiteFooter() {
             <span>Suite 3F</span>
             <a href="tel:+15550100">+1 555 010 0</a>
             <a href="mailto:hello@lumiereatelier.com">hello@lumiereatelier.com</a>
+            <a href="https://wa.me/15550100" target="_blank" rel="noopener noreferrer">WhatsApp Concierge</a>
+          </FooterCol>
+
+          <FooterCol title="Hours">
+            <span>Mon — Fri · 09:00 — 19:00</span>
+            <span>Saturday · 10:00 — 16:00</span>
+            <span>Sunday · By appointment</span>
+            <span className="text-gold">Emergency · Same day</span>
           </FooterCol>
 
           <FooterCol title="Follow">
             <a href="#">Instagram</a>
             <a href="#">Journal</a>
             <a href="#">Google Reviews</a>
-            <a href="#">Concierge WhatsApp</a>
           </FooterCol>
         </div>
 
         <div className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-cream/10 pt-8">
           <p className="text-xs text-cream/50">© {new Date().getFullYear()} Lumière Dental Atelier. All rights reserved.</p>
           <div className="flex gap-6 text-xs text-cream/50">
-            <a href="#" className="hover:text-cream">Privacy</a>
-            <a href="#" className="hover:text-cream">Clinical Terms</a>
-            <a href="#" className="hover:text-cream">Accessibility</a>
+            <a href="#" className="hover:text-cream">Privacy Policy</a>
+            <a href="#" className="hover:text-cream">Terms & Conditions</a>
+            <a href="#" className="hover:text-cream">Accessibility Statement</a>
           </div>
         </div>
       </div>
