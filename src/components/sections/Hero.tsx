@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import heroImg from "@/assets/hero-clinic.jpg";
 
 export function Hero() {
@@ -29,9 +30,8 @@ export function Hero() {
           </h1>
 
           <p className="reveal reveal-delay-2 mt-8 max-w-xl text-base leading-relaxed text-foreground/75 lg:text-lg">
-            Quiet rooms, patient hands, and a philosophy of restraint. Every treatment
-            at Lumière is composed like a piece of couture — measured, personal, and
-            entirely yours.
+            Premium cosmetic dentistry, veneers, smile makeovers, implants, and Invisalign
+            treatments designed around you.
           </p>
 
           <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-4">
@@ -39,12 +39,12 @@ export function Hero() {
             <a href="#expertise" className="btn-ghost-ink">Discover the Atelier</a>
           </div>
 
-          <div className="reveal reveal-delay-4 mt-16 flex flex-wrap items-center gap-10 border-t border-border/60 pt-8">
-            <Metric value="14" label="Years of practice" />
-            <div className="hairline hidden h-8 w-px md:block" />
-            <Metric value="4,700+" label="Smiles restored" />
-            <div className="hairline hidden h-8 w-px md:block" />
-            <Metric value="9.8" suffix="/10" label="Patient rating" />
+          {/* Trust indicators */}
+          <div className="reveal reveal-delay-4 mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5 max-w-2xl border-t border-border/60 pt-8">
+            <Trust icon="star" label="4.9 / 5" sub="Google Rating" />
+            <Trust icon="heart" label="47,000+" sub="Patients Served" />
+            <Trust icon="clock" label="15+ Years" sub="Experience" />
+            <Trust icon="award" label="Award-Winning" sub="Cosmetic Dentistry" />
           </div>
         </div>
       </div>
@@ -68,6 +68,26 @@ function Metric({ value, label, suffix }: { value: string; label: string; suffix
         {suffix && <span className="text-lg text-muted-foreground">{suffix}</span>}
       </div>
       <div className="mt-1 text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">{label}</div>
+    </div>
+  );
+}
+
+function Trust({ icon, label, sub }: { icon: "star" | "heart" | "clock" | "award"; label: string; sub: string }) {
+  const paths: Record<string, ReactNode> = {
+    star: <path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.5-6.2 3.5L7 14.3l-5-4.9 7-.9z" />,
+    heart: <path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z" />,
+    clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
+    award: <><circle cx="12" cy="9" r="6" /><path d="M9 14l-2 8 5-3 5 3-2-8" /></>,
+  };
+  return (
+    <div className="flex items-start gap-3">
+      <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-gold-deep" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" strokeLinecap="round">
+        {paths[icon]}
+      </svg>
+      <div>
+        <div className="font-display text-lg leading-tight">{label}</div>
+        <div className="mt-0.5 text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">{sub}</div>
+      </div>
     </div>
   );
 }
