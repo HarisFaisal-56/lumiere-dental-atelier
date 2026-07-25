@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import heroImg from "@/assets/hero-clinic.jpg";
 
 export function Hero() {
@@ -72,7 +73,7 @@ function Metric({ value, label, suffix }: { value: string; label: string; suffix
 }
 
 function Trust({ icon, label, sub }: { icon: "star" | "heart" | "clock" | "award"; label: string; sub: string }) {
-  const paths: Record<string, React.ReactNode> = {
+  const paths: Record<string, ReactNode> = {
     star: <path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.5-6.2 3.5L7 14.3l-5-4.9 7-.9z" />,
     heart: <path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z" />,
     clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
