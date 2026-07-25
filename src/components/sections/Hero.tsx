@@ -29,9 +29,8 @@ export function Hero() {
           </h1>
 
           <p className="reveal reveal-delay-2 mt-8 max-w-xl text-base leading-relaxed text-foreground/75 lg:text-lg">
-            Quiet rooms, patient hands, and a philosophy of restraint. Every treatment
-            at Lumière is composed like a piece of couture — measured, personal, and
-            entirely yours.
+            Premium cosmetic dentistry, veneers, smile makeovers, implants, and Invisalign
+            treatments designed around you.
           </p>
 
           <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-4">
@@ -39,12 +38,12 @@ export function Hero() {
             <a href="#expertise" className="btn-ghost-ink">Discover the Atelier</a>
           </div>
 
-          <div className="reveal reveal-delay-4 mt-16 flex flex-wrap items-center gap-10 border-t border-border/60 pt-8">
-            <Metric value="14" label="Years of practice" />
-            <div className="hairline hidden h-8 w-px md:block" />
-            <Metric value="4,700+" label="Smiles restored" />
-            <div className="hairline hidden h-8 w-px md:block" />
-            <Metric value="9.8" suffix="/10" label="Patient rating" />
+          {/* Trust indicators */}
+          <div className="reveal reveal-delay-4 mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5 max-w-2xl border-t border-border/60 pt-8">
+            <Trust icon="star" label="4.9 / 5" sub="Google Rating" />
+            <Trust icon="heart" label="47,000+" sub="Patients Served" />
+            <Trust icon="clock" label="15+ Years" sub="Experience" />
+            <Trust icon="award" label="Award-Winning" sub="Cosmetic Dentistry" />
           </div>
         </div>
       </div>
