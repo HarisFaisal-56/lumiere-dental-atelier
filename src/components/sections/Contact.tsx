@@ -26,9 +26,7 @@ export function Contact() {
             <div className="reveal reveal-delay-3 mt-10 space-y-6">
               <Row label="Studio" value="14 Rue de la Lumière, Suite 3F" />
               <Row label="Telephone" value="+1 555 010 0" href="tel:+15550100" />
-              <Row label="WhatsApp" value="Message the concierge" href="https://wa.me/15550100" />
               <Row label="Correspondence" value="hello@lumiereatelier.com" href="mailto:hello@lumiereatelier.com" />
-              <Row label="Emergency" value="Same-day · +1 555 010 9" href="tel:+15550109" />
             </div>
 
             <div className="reveal reveal-delay-4 mt-10 rounded-2xl border border-border bg-background/60 backdrop-blur-sm p-6">
