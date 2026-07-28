@@ -133,7 +133,6 @@ function ReviewCard({ r }: { r: Review }) {
         </div>
       </footer>
 
-      <GoogleG className="pointer-events-none absolute bottom-6 right-7 h-6 w-6 opacity-[0.06] transition-opacity duration-500 group-hover:opacity-[0.12]" />
     </article>
   );
 }
