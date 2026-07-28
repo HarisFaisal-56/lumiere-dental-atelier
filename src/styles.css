@@ -244,6 +244,12 @@
   }
 }
 
+@utility marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+
 /* ============================================================
  * Animations
  * ============================================================ */
