@@ -115,12 +115,14 @@ export function Philosophy() {
                 long-lasting smiles.
               </p>
             </div>
-            <img
-              src={smileImg}
-              alt="Restored natural smile"
-              loading="lazy"
-              className="mt-6 h-32 w-full object-cover object-top rounded-xl"
-            />
+            <div className="mt-8 aspect-[16/9] rounded-xl overflow-hidden shadow-inset-line">
+              <img
+                src={smileImg}
+                alt="Restored natural smile"
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
+              />
+            </div>
           </article>
         </div>
 
