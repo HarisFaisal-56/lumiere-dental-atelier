@@ -30,7 +30,7 @@ export function Philosophy() {
     return () => io.disconnect();
   }, []);
 
-  const satisfaction = useCount(100, active);
+  const satisfaction = useCount(98, active);
   const smiles = useCount(4700, active, 1800);
   const dashArray = 283;
   const dashOffset = dashArray - (dashArray * satisfaction) / 100;
