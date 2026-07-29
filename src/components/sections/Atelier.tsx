@@ -1,4 +1,3 @@
-import receptionImg from "@/assets/reception.jpg";
 import dentistImg from "@/assets/dentist.jpg";
 
 export function Atelier() {
@@ -19,9 +18,6 @@ export function Atelier() {
                 <p className="text-[0.65rem] uppercase tracking-[0.3em] text-cream/80">Lead Clinician</p>
                 <p className="mt-1 font-display text-2xl">Dr. Elyse Laurent, DMD</p>
               </div>
-            </div>
-            <div className="reveal reveal-delay-2 absolute -bottom-10 -right-6 hidden md:block w-56 rounded-2xl overflow-hidden shadow-elegant border-4 border-background animate-float-slow">
-              <img src={receptionImg} alt="Reception" loading="lazy" className="h-40 w-full object-cover" />
             </div>
           </div>
 
