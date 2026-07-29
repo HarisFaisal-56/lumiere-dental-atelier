@@ -8,6 +8,7 @@ import { Philosophy } from "@/components/sections/Philosophy";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { SiteFooter } from "@/components/SiteFooter";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
