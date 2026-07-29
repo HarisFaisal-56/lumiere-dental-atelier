@@ -51,6 +51,8 @@ function Home() {
       <Testimonials />
       <Contact />
       <SiteFooter />
+      <WhatsAppButton />
+
     </main>
   );
 }
