@@ -10,6 +10,7 @@ const WHATSAPP_NUMBER = "15550100";
 const WHATSAPP_MESSAGE =
   "Hello Lumière Dental Atelier — I'd like to enquire about a consultation.";
 
+/** Dynamically build the wa.me link from the constants above. */
 const WHATSAPP_URL =
   `https://wa.me/${WHATSAPP_NUMBER}` +
   (WHATSAPP_MESSAGE ? `?text=${encodeURIComponent(WHATSAPP_MESSAGE)}` : "");
