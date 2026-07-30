@@ -52,8 +52,6 @@ const SERVICES = [
       </svg>
     ),
   },
-
-  },
   {
     n: "05",
     title: "Ceramic Implants",
