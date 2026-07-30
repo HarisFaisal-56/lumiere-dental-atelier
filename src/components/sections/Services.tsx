@@ -5,8 +5,10 @@ const SERVICES = [
     body: "Micro-precise scaling, polishing, and preventive counsel — the quiet foundation of every smile we shape.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M22 14c-4 0-6.5 3-6.5 6.8 0 3.3 1.4 5.3 2.4 8 .9 2.7.8 5.6 1.8 8.6.7 2.4 1.9 4.6 3.5 4.6 2 0 2.5-2.4 3-5.4.4-2 .9-3.8 2-3.8s1.6 1.8 2 3.8c.5 3 1 5.4 3 5.4 1.6 0 2.8-2.2 3.5-4.6 1-3 .9-5.9 1.8-8.6 1-2.7 2.4-4.7 2.4-8 0-3.8-2.5-6.8-6.5-6.8-2.5 0-3.8 1-5.6 1.9-1.1.5-1.7.7-2.6.7s-1.5-.2-2.6-.7C25.8 15 24.5 14 22 14z"/>
-        <path d="M42 10l2 3 3-1M20 8l-2 3-3-1"/>
+        <path d="M40 12l12 12-22 22a8 8 0 0 1-3.6 2.1L16 51l2.9-10.4A8 8 0 0 1 21 37z"/>
+        <path d="M36 16l12 12"/>
+        <path d="M20 44l4 4"/>
+        <path d="M12 16l1.6 3.4L17 21l-3.4 1.6L12 26l-1.6-3.4L7 21l3.4-1.6z"/>
       </svg>
     ),
   },
@@ -16,9 +18,11 @@ const SERVICES = [
     body: "Whisper-thin bespoke shells hand-sculpted for translucency and light. Cinema-grade smiles, discreetly done.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M12 26c8-10 32-10 40 0"/>
-        <path d="M18 28c0 8 5 14 14 14s14-6 14-14"/>
-        <path d="M24 28v10M32 28v12M40 28v10"/>
+        <path d="M18 22h9v13a4.5 4.5 0 0 1-9 0z"/>
+        <path d="M29 22h9v15a4.5 4.5 0 0 1-9 0z"/>
+        <path d="M40 22h7v11a3.5 3.5 0 0 1-7 0z"/>
+        <path d="M14 17c8-4 30-4 38 0"/>
+        <path d="M50 44c0 6-8 10-18 10S14 50 14 44"/>
       </svg>
     ),
   },
@@ -28,8 +32,10 @@ const SERVICES = [
     body: "Complete reconstructions delivered across a single arc of care — architecture, aesthetics, and function in unison.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M14 20c0-4 3-8 8-8s6 3 10 3 5-3 10-3 8 4 8 8-2 6-3 10-1 8-3 12-4 6-6 6-3-3-5-8-2-8-4-8-2 3-4 8-3 8-5 8-4-2-6-6-2-8-3-12-3-6-3-10z"/>
-        <circle cx="32" cy="30" r="2"/>
+        <path d="M10 26c0 14 10 24 22 24s22-10 22-24"/>
+        <path d="M10 26c6-6 14-9 22-9s16 3 22 9"/>
+        <path d="M22 20.5V44M32 17.5V50M42 20.5V44"/>
+        <path d="M32 8v6M27 11l5-3 5 3"/>
       </svg>
     ),
   },
@@ -39,10 +45,14 @@ const SERVICES = [
     body: "Custom clear aligners engineered from a single high-resolution scan. Progress you can feel — never see.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M12 22c0-3 3-6 6-6h28c3 0 6 3 6 6v6c0 12-10 22-20 22S12 40 12 28z"/>
-        <path d="M20 20v14M28 20v18M36 20v18M44 20v14"/>
+        <path d="M14 20c0-2.2 1.8-4 4-4h28c2.2 0 4 1.8 4 4v6c0 12-8 22-18 22S14 38 14 26z"/>
+        <path d="M20 30h24"/>
+        <path d="M26 24v12M38 24v12"/>
+        <path d="M32 12v40"/>
       </svg>
     ),
+  },
+
   },
   {
     n: "05",
