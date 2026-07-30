@@ -88,21 +88,23 @@ export function Services() {
             </a>
           </div>
 
-          <div className="lg:col-span-7 grid gap-px bg-border sm:grid-cols-2 rounded-2xl overflow-hidden border border-border">
+          <div className="lg:col-span-7 grid gap-px bg-border sm:grid-cols-2 rounded-2xl overflow-hidden border border-border shadow-[0_24px_70px_-40px_color-mix(in_oklab,var(--ink)_28%,transparent)]">
             {SERVICES.map((s, i) => (
               <article
                 key={s.n}
-                className={`reveal reveal-delay-${(i % 4) + 1} group relative bg-card p-8 transition-colors duration-500 hover:bg-accent/40`}
+                className={`reveal reveal-delay-${(i % 4) + 1} group relative bg-card px-8 pt-9 pb-10 transition-[background-color,transform,box-shadow] duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:-translate-y-[2px] hover:bg-accent/25 hover:shadow-[0_18px_46px_-28px_color-mix(in_oklab,var(--ink)_26%,transparent)] hover:z-10`}
               >
                 <div className="flex items-start justify-between">
                   <span className="font-mono text-[0.7rem] tracking-widest text-gold-deep">{s.n}</span>
-                  <div className="h-10 w-10 text-gold-deep transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
-                    {s.icon}
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[color-mix(in_oklab,var(--gold-deep)_18%,transparent)] bg-[color-mix(in_oklab,var(--gold-deep)_5%,transparent)] transition-colors duration-500 group-hover:border-[color-mix(in_oklab,var(--gold-deep)_32%,transparent)]">
+                    <div className="h-7 w-7 text-gold-deep transition-transform duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-105">
+                      {s.icon}
+                    </div>
                   </div>
                 </div>
-                <h3 className="mt-6 font-display text-2xl leading-tight">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
-                <span className="absolute bottom-0 left-0 h-px w-0 bg-gold-deep transition-[width] duration-700 group-hover:w-full" />
+                <h3 className="mt-7 font-display text-[1.6rem] leading-[1.15] tracking-[-0.015em]">{s.title}</h3>
+                <p className="mt-4 max-w-[34ch] text-sm leading-[1.75] text-muted-foreground">{s.body}</p>
+                <span className="absolute bottom-0 left-0 h-px w-0 bg-gold-deep transition-[width] duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:w-full" />
               </article>
             ))}
           </div>
