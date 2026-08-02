@@ -5,11 +5,13 @@ const SERVICES = [
     body: "Micro-precise scaling, polishing, and preventive counsel — the quiet foundation of every smile we shape.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M32 18c-3-3-7-4.5-11-3.5C16.5 15.6 14 19.6 14 25c0 7 2.5 13 5 19 1 2.4 4 2.2 4.6-.3l1.6-6.6c.6-2.4 4-2.4 4.6 0l1.4 5.8"/>
-        <circle cx="42" cy="28" r="9"/>
-        <path d="M48.6 34.4 55 41"/>
-        <path d="M34 10l1.5 3.2L38.7 15l-3.2 1.5L34 19.7 32.5 16.5 29.3 15l3.2-1.5z"/>
+        <path d="M26 22c-5.4 0-9.4 3.8-9.4 9.6 0 5 1.4 8.6 2.8 12.2.9 2.3 1.5 4.6 1.9 6.6.4 2.2 3.4 2.4 4.1.3l1.6-4.8c.6-1.9 3.3-1.9 3.9 0l1.6 4.8c.7 2.1 3.7 1.9 4.1-.3.3-1.6.7-3.3 1.3-5"/>
+        <path d="M26 22c2 0 3.8.6 5.6 1.3 1.3.5 2.6.9 3.9.9"/>
+        <circle cx="42" cy="27" r="10.5"/>
+        <path d="m49.6 34.4 4.6 4.6a2.4 2.4 0 0 1-3.4 3.4l-4.6-4.6"/>
+        <path d="M28.5 8.5 30 13.4l4.9 1.6-4.9 1.6-1.5 4.9-1.5-4.9-4.9-1.6 4.9-1.6z"/>
       </svg>
+
     ),
   },
   {
