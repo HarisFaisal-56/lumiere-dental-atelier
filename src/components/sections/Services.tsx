@@ -5,10 +5,10 @@ const SERVICES = [
     body: "Micro-precise scaling, polishing, and preventive counsel — the quiet foundation of every smile we shape.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M40 12l12 12-22 22a8 8 0 0 1-3.6 2.1L16 51l2.9-10.4A8 8 0 0 1 21 37z"/>
-        <path d="M36 16l12 12"/>
-        <path d="M20 44l4 4"/>
-        <path d="M12 16l1.6 3.4L17 21l-3.4 1.6L12 26l-1.6-3.4L7 21l3.4-1.6z"/>
+        <path d="M32 18c-3-3-7-4.5-11-3.5C16.5 15.6 14 19.6 14 25c0 7 2.5 13 5 19 1 2.4 4 2.2 4.6-.3l1.6-6.6c.6-2.4 4-2.4 4.6 0l1.4 5.8"/>
+        <circle cx="42" cy="28" r="9"/>
+        <path d="M48.6 34.4 55 41"/>
+        <path d="M34 10l1.5 3.2L38.7 15l-3.2 1.5L34 19.7 32.5 16.5 29.3 15l3.2-1.5z"/>
       </svg>
     ),
   },
@@ -18,11 +18,12 @@ const SERVICES = [
     body: "Whisper-thin bespoke shells hand-sculpted for translucency and light. Cinema-grade smiles, discreetly done.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M18 22h9v13a4.5 4.5 0 0 1-9 0z"/>
-        <path d="M29 22h9v15a4.5 4.5 0 0 1-9 0z"/>
-        <path d="M40 22h7v11a3.5 3.5 0 0 1-7 0z"/>
-        <path d="M14 17c8-4 30-4 38 0"/>
-        <path d="M50 44c0 6-8 10-18 10S14 50 14 44"/>
+        <path d="M8 30c-1.5-6 .5-12 6-13.6 6-1.8 12 .4 18 3 6-2.6 12-4.8 18-3 5.5 1.6 7.5 7.6 6 13.6"/>
+        <path d="M14 28.5c0-3.5 2-5.5 4.6-5.5 3 0 5.4 2.4 5.4 6v7c0 1.6-1 2.4-3.6 2.4-4 0-6-1-6.2-2.6z"/>
+        <path d="M26 28.8c0-3.6 2.2-6.2 5.8-6.2 3.6 0 5.6 2.6 5.6 6.2v6.8c0 1.8-1.2 2.6-5.6 2.6s-5.8-.8-5.8-2.6z"/>
+        <path d="M39.6 28.8c0-3.4 2.2-5.8 5-5.8 2.8 0 5 2 5 5.5v7c-.2 1.8-2.2 2.6-6 2.6-2.6 0-4-.8-4-2.4z"/>
+        <path d="M46 44l1.4 3 3 1.4-3 1.4L46 53l-1.4-3.2-3-1.4 3-1.4z"/>
+        <path d="M18 46l1 2.2 2.2 1-2.2 1L18 52.4l-1-2.2-2.2-1 2.2-1z"/>
       </svg>
     ),
   },
@@ -32,10 +33,10 @@ const SERVICES = [
     body: "Complete reconstructions delivered across a single arc of care — architecture, aesthetics, and function in unison.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M10 26c0 14 10 24 22 24s22-10 22-24"/>
-        <path d="M10 26c6-6 14-9 22-9s16 3 22 9"/>
-        <path d="M22 20.5V44M32 17.5V50M42 20.5V44"/>
-        <path d="M32 8v6M27 11l5-3 5 3"/>
+        <path d="M12 26c6-5 14-7 20-7s14 2 20 7c0 12-9 21-20 21s-20-9-20-21z"/>
+        <path d="M14.5 30h35"/>
+        <path d="M22 30v6M32 30v8M42 30v6"/>
+        <path d="M20 40c4 2.5 8 3.6 12 3.6S38 42.5 44 40"/>
       </svg>
     ),
   },
@@ -45,13 +46,15 @@ const SERVICES = [
     body: "Custom clear aligners engineered from a single high-resolution scan. Progress you can feel — never see.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" strokeWidth="1.2" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
-        <path d="M14 20c0-2.2 1.8-4 4-4h28c2.2 0 4 1.8 4 4v6c0 12-8 22-18 22S14 38 14 26z"/>
-        <path d="M20 30h24"/>
-        <path d="M26 24v12M38 24v12"/>
-        <path d="M32 12v40"/>
+        <path d="M15 54V36c0-11.6 7.6-20 17-20s17 8.4 17 20v18"/>
+        <path d="M23 54V36c0-7.6 4-13 9-13s9 5.4 9 13v18"/>
+        <path d="M32 16v7"/>
+        <path d="M17.4 30.5h5.8M40.8 30.5h5.8"/>
+        <path d="M16 41h7M41 41h7"/>
       </svg>
     ),
   },
+
   {
     n: "05",
     title: "Ceramic Implants",
