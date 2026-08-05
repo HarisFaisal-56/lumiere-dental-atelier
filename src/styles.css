@@ -286,6 +286,16 @@
   from { transform: scale(1.08) translate(0, 0); }
   to { transform: scale(1.16) translate(-2%, -1%); }
 }
+/* Gentler zoom on tablet so more of the composition stays visible */
+@keyframes ken-burns-soft {
+  from { transform: scale(1.02) translate(0, 0); }
+  to { transform: scale(1.06) translate(-1%, -0.5%); }
+}
+/* Mobile: essentially no zoom — show the widest possible framing */
+@keyframes ken-burns-flat {
+  from { transform: scale(1) translate(0, 0); }
+  to { transform: scale(1.03) translate(-0.5%, 0); }
+}
 
 .reveal {
   opacity: 0;
