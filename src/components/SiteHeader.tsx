@@ -52,40 +52,54 @@ export function SiteHeader() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border"
-          aria-label="Menu"
+          className="lg:hidden inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border/80 bg-background/60 backdrop-blur-sm transition-colors hover:border-foreground/30"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
         >
           <span className="flex flex-col gap-1.5">
-            <span className={`h-px w-5 bg-foreground transition-all ${open ? "translate-y-[3px] rotate-45" : ""}`} />
-            <span className={`h-px w-5 bg-foreground transition-all ${open ? "-translate-y-[3px] -rotate-45" : ""}`} />
+            <span className={`h-px w-5 bg-foreground transition-all duration-300 ${open ? "translate-y-[3px] rotate-45" : ""}`} />
+            <span className={`h-px w-5 bg-foreground transition-all duration-300 ${open ? "-translate-y-[3px] -rotate-45" : ""}`} />
           </span>
         </button>
       </div>
 
       {/* Mobile drawer */}
       <div
-        className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-500 ${
-          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        id="mobile-nav"
+        aria-hidden={!open}
+        className={`lg:hidden overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-out ${
+          open ? "max-h-[600px] translate-y-0 opacity-100" : "pointer-events-none max-h-0 -translate-y-2 opacity-0"
         }`}
       >
-        <div className="mx-6 mt-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
-          <nav className="flex flex-col gap-4">
+        <div
+          className="mx-5 mt-4 mb-2 rounded-[28px] border border-border/70 bg-card px-7 pt-8 pb-8"
+          style={{ boxShadow: "0 32px 80px -24px color-mix(in oklab, var(--ink) 28%, transparent)" }}
+        >
+          <nav className="flex flex-col">
             {NAV.map((n) => (
               <a
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium tracking-wide text-foreground/80"
+                tabIndex={open ? 0 : -1}
+                className="flex min-h-[48px] items-center text-[0.95rem] font-medium leading-none tracking-[0.02em] text-foreground/85 transition-colors hover:text-foreground"
               >
                 {n.label}
               </a>
             ))}
-            <a href="#contact" onClick={() => setOpen(false)} className="btn-gold mt-2">
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              tabIndex={open ? 0 : -1}
+              className="btn-gold mt-7 h-14 w-full"
+            >
               Reserve a Visit
             </a>
           </nav>
         </div>
       </div>
+
     </header>
   );
 }
