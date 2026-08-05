@@ -57,10 +57,19 @@ export function SiteHeader() {
           aria-expanded={open}
           aria-controls="mobile-nav"
         >
-          <span className="flex flex-col gap-1.5">
-            <span className={`h-px w-5 bg-foreground transition-all duration-300 ${open ? "translate-y-[3px] rotate-45" : ""}`} />
-            <span className={`h-px w-5 bg-foreground transition-all duration-300 ${open ? "-translate-y-[3px] -rotate-45" : ""}`} />
+          <span className="relative block h-5 w-5">
+            <span
+              className={`absolute left-1/2 top-1/2 h-px w-5 -translate-x-1/2 bg-foreground transition-transform duration-300 ease-out ${
+                open ? "-translate-y-1/2 rotate-45" : "-translate-y-[calc(50%+3px)]"
+              }`}
+            />
+            <span
+              className={`absolute left-1/2 top-1/2 h-px w-5 -translate-x-1/2 bg-foreground transition-transform duration-300 ease-out ${
+                open ? "-translate-y-1/2 -rotate-45" : "-translate-y-[calc(50%-3px)]"
+              }`}
+            />
           </span>
+
         </button>
       </div>
 
