@@ -8,7 +8,7 @@ export function Hero() {
         <img
           src={heroImg}
           alt="Lumière Dental Atelier — clinic interior bathed in warm light"
-          className="h-full w-full object-cover object-[65%_center] sm:object-[60%_center] md:object-[58%_center] lg:object-center animate-ken-burns"
+          className="h-full w-full object-cover animate-ken-burns"
           fetchPriority="high"
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero-overlay)" }} />

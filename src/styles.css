@@ -286,16 +286,6 @@
   from { transform: scale(1.08) translate(0, 0); }
   to { transform: scale(1.16) translate(-2%, -1%); }
 }
-/* Gentler zoom on tablet so more of the composition stays visible */
-@keyframes ken-burns-soft {
-  from { transform: scale(1.02) translate(0, 0); }
-  to { transform: scale(1.06) translate(-1%, -0.5%); }
-}
-/* Mobile: essentially no zoom — show the widest possible framing */
-@keyframes ken-burns-flat {
-  from { transform: scale(1) translate(0, 0); }
-  to { transform: scale(1.03) translate(-0.5%, 0); }
-}
 
 .reveal {
   opacity: 0;
@@ -313,15 +303,6 @@
 .reveal-delay-5 { transition-delay: 500ms; }
 
 .animate-ken-burns { animation: ken-burns 18s ease-in-out infinite alternate; }
-@media (max-width: 1023px) {
-  .animate-ken-burns { animation-name: ken-burns-soft; }
-}
-@media (max-width: 767px) {
-  .animate-ken-burns { animation-name: ken-burns-flat; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .animate-ken-burns { animation: none; }
-}
 .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
 .animate-marquee { animation: marquee 40s linear infinite; }
 .animate-drift-x { animation: marquee 110s linear infinite; will-change: transform; }
