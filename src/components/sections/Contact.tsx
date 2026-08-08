@@ -1,5 +1,6 @@
 import receptionImg from "@/assets/reception.jpg";
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 const HOURS = [
   ["Monday — Friday", "09:00 — 19:00"],
@@ -9,6 +10,53 @@ const HOURS = [
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (submitting) return;
+
+    setSubmitting(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const first = (data.get("first") as string | null)?.trim() ?? "";
+    const last = (data.get("last") as string | null)?.trim() ?? "";
+    const email = (data.get("email") as string | null)?.trim() ?? "";
+    const phone = (data.get("phone") as string | null)?.trim() ?? "";
+    const message = (data.get("message") as string | null)?.trim() ?? "";
+
+    try {
+      const { error: insertError } = await supabase
+        .from("appointments")
+        .insert([
+          {
+            name: `${first} ${last}`,
+            email,
+            phone,
+            message,
+          },
+        ]);
+
+      if (insertError) {
+        console.error("Supabase insert error:", insertError);
+        setError("Something went wrong. Please try again or contact us directly.");
+        return;
+      }
+
+      form.reset();
+      setSent(true);
+    } catch (err) {
+      console.error("Unexpected submission error:", err);
+      setError("Something went wrong. Please try again or contact us directly.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className="relative py-32 lg:py-40 overflow-hidden" style={{ background: "linear-gradient(180deg, oklch(0.97 0.014 88), oklch(0.93 0.02 90))" }}>
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -48,7 +96,7 @@ export function Contact() {
             </div>
 
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={handleSubmit}
               className="reveal reveal-delay-1 rounded-3xl border border-border bg-card p-8 lg:p-10 shadow-soft"
             >
               <div className="grid gap-6 sm:grid-cols-2">
@@ -64,10 +112,13 @@ export function Contact() {
                 <p className="text-xs text-muted-foreground max-w-sm">
                   By submitting you agree to be contacted by Lumière Dental Atelier. We treat your details with clinical confidentiality.
                 </p>
-                <button type="submit" className="btn-gold">
-                  {sent ? "Message received ✓" : "Send your message"}
+                <button type="submit" disabled={submitting} className="btn-gold">
+                  {sent ? "Message received ✓" : submitting ? "Sending…" : "Send your message"}
                 </button>
               </div>
+              {error && (
+                <p className="mt-4 text-sm text-red-600">{error}</p>
+              )}
             </form>
           </div>
         </div>
