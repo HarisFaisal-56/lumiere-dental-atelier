@@ -2,7 +2,7 @@ import heroImg from "@/assets/hero-clinic.jpg";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden">
+    <section id="top" className="relative overflow-hidden lg:min-h-screen">
       {/* Image layer with Ken Burns */}
       <div className="absolute inset-0 bg-background">
         <img
@@ -17,7 +17,7 @@ export function Hero() {
 
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-24 pt-40 lg:px-10 lg:pb-32 lg:pt-48">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-end px-6 pb-20 pt-[calc(100vw*0.63+2.5rem)] lg:min-h-screen lg:pb-32 lg:pt-48 lg:px-10">
         <div className="max-w-3xl">
           <p className="eyebrow reveal">Est. 2011 · A private dental atelier</p>
 
