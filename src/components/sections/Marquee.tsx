@@ -17,8 +17,8 @@ export function Marquee() {
       </p>
       <div className="relative overflow-hidden">
         <div className="flex w-max animate-marquee whitespace-nowrap will-change-transform">
-          {[0, 1].map((g) => (
-            <div key={g} className="flex gap-16 pr-16" aria-hidden={g === 1 ? true : undefined}>
+          {[0, 1, 2, 3].map((g) => (
+            <div key={g} className="flex gap-16 pr-16" aria-hidden={g !== 0 ? true : undefined}>
               {LOGOS.map((l, i) => (
                 <span key={i} className="font-display text-2xl text-foreground/60 tracking-tight">
                   {l}
