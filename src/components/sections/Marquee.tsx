@@ -1,12 +1,12 @@
 const LOGOS = [
-  "Vogue Living",
-  "Condé Nast",
-  "Monocle",
-  "Kinfolk",
-  "Wallpaper*",
-  "Architectural Digest",
-  "AD Middle East",
-  "The Gentlewoman",
+  "Precision",
+  "Craft",
+  "Comfort",
+  "Care",
+  "Detail",
+  "Balance",
+  "Clarity",
+  "Excellence",
 ];
 
 export function Marquee() {
@@ -14,7 +14,7 @@ export function Marquee() {
   return (
     <section className="border-y border-border/60 bg-card/40 py-8 overflow-hidden">
       <p className="mx-auto mb-6 max-w-7xl px-6 lg:px-10 text-center text-[0.7rem] uppercase tracking-[0.32em] text-muted-foreground">
-        As featured in
+        THE LUMIÈRE STANDARD
       </p>
       <div className="relative overflow-hidden">
         <div className="flex w-max animate-marquee gap-16 whitespace-nowrap">
