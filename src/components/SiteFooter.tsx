@@ -49,7 +49,7 @@ export function SiteFooter() {
 
       {/* Marquee word */}
       <div className="overflow-hidden border-t border-cream/10">
-        <div className="flex animate-marquee whitespace-nowrap py-8">
+        <div className="flex w-max animate-marquee whitespace-nowrap py-8">
           {Array.from({ length: 8 }).map((_, i) => (
             <span key={i} className="mx-8 font-display text-6xl lg:text-8xl text-cream/10 italic">
               Lumière · Dental · Atelier ·

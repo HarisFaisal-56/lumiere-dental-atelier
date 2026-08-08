@@ -10,7 +10,6 @@ const LOGOS = [
 ];
 
 export function Marquee() {
-  const items = [...LOGOS, ...LOGOS];
   return (
     <section className="border-y border-border/60 bg-card/40 py-8 overflow-hidden">
       <p className="mx-auto mb-6 max-w-7xl px-6 lg:px-10 text-center text-[0.7rem] uppercase tracking-[0.32em] text-muted-foreground">
