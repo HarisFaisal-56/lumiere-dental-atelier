@@ -4,16 +4,17 @@ export function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden">
       {/* Image layer with Ken Burns */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-background">
         <img
           src={heroImg}
           alt="Lumière Dental Atelier — clinic interior bathed in warm light"
-          className="h-full w-full object-cover animate-ken-burns"
+          className="h-full w-full object-contain object-top lg:object-cover lg:object-center lg:animate-ken-burns"
           fetchPriority="high"
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero-overlay)" }} />
         <div className="absolute inset-0 grain opacity-70" />
       </div>
+
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-24 pt-40 lg:px-10 lg:pb-32 lg:pt-48">
