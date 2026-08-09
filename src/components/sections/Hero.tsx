@@ -18,7 +18,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-24 pt-40 lg:px-10 lg:pb-32 lg:pt-48">
         <div className="max-w-3xl">
-          <p className="eyebrow reveal">Est. 2011 · A private dental atelier</p>
+          <p className="eyebrow reveal">Est. 2012 · A private dental atelier</p>
 
           <h1 className="reveal reveal-delay-1 mt-8 font-display text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-tight text-foreground text-balance">
             A new smile
