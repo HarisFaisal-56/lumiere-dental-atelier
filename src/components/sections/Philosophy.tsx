@@ -25,7 +25,7 @@ export function Philosophy() {
   const [active, setActive] = useState(false);
   useEffect(() => {
     if (!ref.current) return;
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && setActive(true), { threshold: 0.3 });
+    const io = new IntersectionObserver(([e]) => e.isIntersecting && setActive(true), { threshold: 0.05 });
     io.observe(ref.current);
     return () => io.disconnect();
   }, []);
